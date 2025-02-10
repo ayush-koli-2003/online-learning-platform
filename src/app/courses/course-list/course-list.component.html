@@ -1,0 +1,8 @@
+<!-- <p>course-list works!</p> -->
+<router-outlet/>
+<ng-container *ngFor="let c of courseList">
+    <li>{{c.courseId}}  {{c.courseName}} {{c.courseInstructor}} 
+        <button (click)="courseDetail(c.courseId)">See details</button>
+        <button style="margin-left: 5px;" *ngIf="c.subscribtionStatus==false" (click)="doSubscribe(c.courseId)">Subscribe</button>
+        <button style="margin-left: 5px;" *ngIf="c.subscribtionStatus==true" (click)="removeSubscribe(c.courseId)">Unsubscribe</button>
+</ng-container>

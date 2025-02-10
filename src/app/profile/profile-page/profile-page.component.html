@@ -1,0 +1,13 @@
+<!-- <p>profile-page works!</p> -->
+
+<h1>Hello! ~User~</h1>
+
+<h3>These are your subscribed courses:</h3><br>
+
+<ng-container *ngFor="let c of subscribedList">
+    <li>{{c.courseId}}  {{c.courseName}} {{c.courseInstructor}} 
+        <button (click)="courseDetail(c.courseId)">See details</button>
+        <!-- <button style="margin-left: 5px;" *ngIf="c.subscribtionStatus==false" (click)="doSubscribe(c.courseId)">Subscribe</button>
+        <button style="margin-left: 5px;" *ngIf="c.subscribtionStatus==true" (click)="removeSubscribe(c.courseId)">Unsubscibe</button> -->
+    </li>
+</ng-container>
